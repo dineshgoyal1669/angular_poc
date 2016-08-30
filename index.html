@@ -1,0 +1,25 @@
+<html ng-app='cart'> 
+	<script src='js/angular.min.js'></script>
+	<script src="js/angular-resource.min.js"></script>
+	<script src='module/cart.js'></script>
+	<script src='controller/items_controller.js'></script>
+	<script src='service/item_list.js'></script>
+	<body ng-controller='ItemsController'>
+		<label> Favourites:</label>{{favourites.length}}
+		<ul>
+			<li><a href='javascript:void(0);' ng-click="filters.category = ''">All</a></li>
+			<li><a href='javascript:void(0);' ng-click="filters.category = 'electronic'">Electronics</a></li>
+			<li><a href='javascript:void(0);' ng-click="filters.category = 'mobile'">Mobiles</a>	</li>
+			<li><a href='javascript:void(0);' ng-click="filters.category = 'watch'">Watches</a></li>
+		</ul>
+
+	
+	<div >
+	<input type='text' ng-model='filters.name'></input>
+	<li ng-repeat='item in items | filter:filters'>{{item['name']}}
+	<a href='javascript:void(0);' ng-click="setFavourites(item)" ng-show="!item.showAdd">Add to favourite</a>
+	<a href='javascript:void(0);' ng-click="removeFavourites(item)" ng-show="item.showRemove">Remove from favourite</a>
+	</li>
+	</div>
+	</body>
+</html>

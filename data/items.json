@@ -1,0 +1,37 @@
+[{
+	"id": 1,
+	"name": "Samsung",
+	"category": "mobile"
+}, {
+	"id": 2,
+	"name": "Nokia",
+	"category": "mobile"
+}, {
+	"id": 3,
+	"name": "Apple",
+	"category": "mobile"
+}, {
+	"id": 4,
+	"name": "Refrigerator",
+	"category": "electronic"
+}, {
+	"id": 5,
+	"name": "LED TV",
+	"category": "electronic"
+}, {
+	"id": 6,
+	"name": "Air Conditionar",
+	"category": "electronic"
+}, {
+	"id": 7,
+	"name": "Titan",
+	"category": "watch"
+}, {
+	"id": 8,
+	"name": "Edifice",
+	"category": "watch"
+}, {
+	"id": 9,
+	"name": "Rolex",
+	"category": "watch"
+}]
