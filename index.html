@@ -19,7 +19,13 @@
 	<li ng-repeat='item in items | filter:filters'>{{item['name']}}
 	<a href='javascript:void(0);' ng-click="setFavourites(item)" ng-show="!item.showAdd">Add to favourite</a>
 	<a href='javascript:void(0);' ng-click="removeFavourites(item)" ng-show="item.showRemove">Remove from favourite</a>
+	<button ng-click='decrementCount()'>-</button>
+	<input type='text' size='1' ng-model='item.count' ng-init='item.count=0'></input>
+	<button ng-click='incrementCount()'>+</button>
 	</li>
+	</div>
+
+	<div>
 	</div>
 	</body>
 </html>
