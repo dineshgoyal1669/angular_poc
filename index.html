@@ -19,12 +19,21 @@
 	<li ng-repeat='item in items | filter:filters'>{{item['name']}}
 	<a href='javascript:void(0);' ng-click="setFavourites(item)" ng-show="!item.showAdd">Add to favourite</a>
 	<a href='javascript:void(0);' ng-click="removeFavourites(item)" ng-show="item.showRemove">Remove from favourite</a>
-	<button ng-click='decrementCount()'>-</button>
-	<input type='text' size='1' ng-model='item.count' ng-init='item.count=0'></input>
-	<button ng-click='incrementCount()'>+</button>
+	<button ng-click='decrementCount(item)'>-</button>
+	<input type='text' size='1' ng-init='item.count=0' ng-model='item.count' ></input>
+	<button ng-click='incrementCount(item)'>+</button>
+	cost : {{item.cost}}
 	</li>
 	</div>
-
+	Cart : Items = {{cart.length}}, Total Cost = {{total_cost}}
+	<div>
+		<li ng-repeat='item in cart'>{{item['name']}}
+			<button ng-click='decrementCount(item)'>-</button>
+			<input type='text' size='1' ng-model='item.count' ng-init='item.count=0'></input>
+			<button ng-click='incrementCount(item)'>+</button>	
+			Item Cost = {{item.cost*item.count}}
+		</li>
+	</div>
 	<div>
 	</div>
 	</body>

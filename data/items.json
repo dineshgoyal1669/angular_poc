@@ -1,37 +1,46 @@
 [{
 	"id": 1,
 	"name": "Samsung",
-	"category": "mobile"
+	"category": "mobile",
+	"cost": 10
 }, {
 	"id": 2,
 	"name": "Nokia",
-	"category": "mobile"
+	"category": "mobile",
+	"cost": 20
 }, {
 	"id": 3,
 	"name": "Apple",
-	"category": "mobile"
+	"category": "mobile",
+	"cost": 30
 }, {
 	"id": 4,
 	"name": "Refrigerator",
-	"category": "electronic"
+	"category": "electronic",
+	"cost": 40
 }, {
 	"id": 5,
 	"name": "LED TV",
-	"category": "electronic"
+	"category": "electronic",
+	"cost": 50
 }, {
 	"id": 6,
 	"name": "Air Conditionar",
-	"category": "electronic"
+	"category": "electronic",
+	"cost": 60
 }, {
 	"id": 7,
 	"name": "Titan",
-	"category": "watch"
+	"category": "watch",
+	"cost": 70
 }, {
 	"id": 8,
 	"name": "Edifice",
-	"category": "watch"
+	"category": "watch",
+	"cost": 80
 }, {
 	"id": 9,
 	"name": "Rolex",
-	"category": "watch"
+	"category": "watch",
+	"cost": 90
 }]
