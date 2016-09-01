@@ -4,6 +4,7 @@
 	<script src='module/cart.js'></script>
 	<script src='controller/items_controller.js'></script>
 	<script src='service/item_list.js'></script>
+	<script src='service/coupon_list.js'></script>
 	<body ng-controller='ItemsController'>
 		<label> Favourites:</label>{{favourites.length}}
 		<ul>
@@ -16,20 +17,20 @@
 	
 	<div >
 	<input type='text' ng-model='filters.name'></input>
-	<li ng-repeat='item in items | filter:filters'>{{item['name']}}
+	<li ng-repeat='item in items | filter:filters' >{{item['name']}}
 	<a href='javascript:void(0);' ng-click="setFavourites(item)" ng-show="!item.showAdd">Add to favourite</a>
 	<a href='javascript:void(0);' ng-click="removeFavourites(item)" ng-show="item.showRemove">Remove from favourite</a>
 	<button ng-click='decrementCount(item)'>-</button>
-	<input type='text' size='1' ng-init='item.count=0' ng-model='item.count' ></input>
+	<input type='text' size='1' ng-init='item.count=0' ng-model='item.count' ng-change='updateCartItems(item)'></input>
 	<button ng-click='incrementCount(item)'>+</button>
 	cost : {{item.cost}}
 	</li>
 	</div>
-	Cart : Items = {{cart.length}}, Total Cost = {{total_cost}}
+	Cart : Items = {{cart.length}}, Total Cost = {{total_cost}} , Coupon: <input type='text' ng-model='coupon_code' ng-change='applyCode()'></input>, Payable Amount: {{payable_amount}}
 	<div>
 		<li ng-repeat='item in cart'>{{item['name']}}
 			<button ng-click='decrementCount(item)'>-</button>
-			<input type='text' size='1' ng-model='item.count' ng-init='item.count=0'></input>
+			<input type='text' size='1' ng-model='item.count' ng-change='updateCartItems(item)'></input>
 			<button ng-click='incrementCount(item)'>+</button>	
 			Item Cost = {{item.cost*item.count}}
 		</li>

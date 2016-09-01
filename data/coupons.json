@@ -1,0 +1,10 @@
+[{
+	"code": "OFF10",
+	"discount": 10
+}, {
+	"code": "OFF20",
+	"discount": 20
+}, {
+	"code": "OFF30",
+	"discount": 30
+}]
